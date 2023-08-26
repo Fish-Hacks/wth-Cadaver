@@ -34,9 +34,17 @@ class HandService {
             
             guard let indexTipLocation = fingerPoints[.indexTip],
                   let thumbTipLocation = fingerPoints[.thumbTip],
-                  let thumbIPLocation = fingerPoints[.thumbIP] else { return }
+                  let thumbIPLocation = fingerPoints[.thumbIP],
+                  let wristLocation = fingerPoints[.wrist] else { return }
             
             let reference = thumbTipLocation.location.distance(from: thumbIPLocation.location)
+            
+//            print((indexTipLocation.location.distance(from: wristLocation.location) / reference))
+            
+            if (indexTipLocation.location.distance(from: wristLocation.location) / reference) > 5 {
+                print("Pointing")
+            
+            }
             
             if (thumbTipLocation.location.distance(from: indexTipLocation.location) / reference) < 1.5 {
                 print("Tapping")

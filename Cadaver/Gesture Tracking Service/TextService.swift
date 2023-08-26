@@ -13,6 +13,11 @@ class TextService {
     
     var textRequest = VNRecognizeTextRequest()
     
+    init() {
+        textRequest.recognitionLanguages = ["en_US"]
+        textRequest.recognitionLevel = .fast
+    }
+    
     func receiveText(image pixelBuffer: CVPixelBuffer) {
         let handler = VNImageRequestHandler(cvPixelBuffer: pixelBuffer, options: [:])
         
