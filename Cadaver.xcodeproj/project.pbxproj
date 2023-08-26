@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		32090AB32A99CB5C00B232BF /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32090AB22A99CB5C00B232BF /* UIImage.swift */; };
+		32090AB62A99DD5200B232BF /* CommunicationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32090AB52A99DD5200B232BF /* CommunicationService.swift */; };
 		3254BB2F2A99C05F0022E7E0 /* CadaverApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3254BB2E2A99C05F0022E7E0 /* CadaverApp.swift */; };
 		3254BB312A99C05F0022E7E0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3254BB302A99C05F0022E7E0 /* ContentView.swift */; };
 		3254BB332A99C0610022E7E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3254BB322A99C0610022E7E0 /* Assets.xcassets */; };
@@ -26,6 +27,7 @@
 
 /* Begin PBXFileReference section */
 		32090AB22A99CB5C00B232BF /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		32090AB52A99DD5200B232BF /* CommunicationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunicationService.swift; sourceTree = "<group>"; };
 		3254BB2B2A99C05F0022E7E0 /* Cadaver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cadaver.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3254BB2E2A99C05F0022E7E0 /* CadaverApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadaverApp.swift; sourceTree = "<group>"; };
 		3254BB302A99C05F0022E7E0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -54,6 +56,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		32090AB42A99DD4700B232BF /* Communication Service */ = {
+			isa = PBXGroup;
+			children = (
+				32090AB52A99DD5200B232BF /* CommunicationService.swift */,
+			);
+			path = "Communication Service";
+			sourceTree = "<group>";
+		};
 		3254BB222A99C05F0022E7E0 = {
 			isa = PBXGroup;
 			children = (
@@ -75,9 +85,7 @@
 			children = (
 				3254BB2E2A99C05F0022E7E0 /* CadaverApp.swift */,
 				3254BB302A99C05F0022E7E0 /* ContentView.swift */,
-				32A3916F2A99C391007DC786 /* CameraPreview.swift */,
-				32A3916E2A99C390007DC786 /* CameraPreview+AVCaptureVideoDataOutputSampleBufferDelegate.swift */,
-				32A391722A99C3D3007DC786 /* CameraView.swift */,
+				32090AB42A99DD4700B232BF /* Communication Service */,
 				3254BB3E2A99C12B0022E7E0 /* Gesture Tracking Service */,
 				3254BB322A99C0610022E7E0 /* Assets.xcassets */,
 				32A391632A99C216007DC786 /* Helper Methods */,
@@ -100,6 +108,9 @@
 				32A3915F2A99C1E4007DC786 /* HandClassifier.swift */,
 				32A391602A99C1E4007DC786 /* HandClassifierDelegate.swift */,
 				3254BB3C2A99C1270022E7E0 /* GestureTrackingService.swift */,
+				32A3916F2A99C391007DC786 /* CameraPreview.swift */,
+				32A3916E2A99C390007DC786 /* CameraPreview+AVCaptureVideoDataOutputSampleBufferDelegate.swift */,
+				32A391722A99C3D3007DC786 /* CameraView.swift */,
 			);
 			path = "Gesture Tracking Service";
 			sourceTree = "<group>";
@@ -196,6 +207,7 @@
 				32A391712A99C391007DC786 /* CameraPreview.swift in Sources */,
 				32A391702A99C391007DC786 /* CameraPreview+AVCaptureVideoDataOutputSampleBufferDelegate.swift in Sources */,
 				3254BB3D2A99C1270022E7E0 /* GestureTrackingService.swift in Sources */,
+				32090AB62A99DD5200B232BF /* CommunicationService.swift in Sources */,
 				32A391622A99C1E4007DC786 /* HandClassifierDelegate.swift in Sources */,
 				32090AB32A99CB5C00B232BF /* UIImage.swift in Sources */,
 				32A391612A99C1E4007DC786 /* HandClassifier.swift in Sources */,

@@ -20,6 +20,8 @@ final class CameraPreview: UIView {
     
     private var photoOutput = AVCapturePhotoOutput()
     
+    var communicationService = CommunicationService()
+    
     var handClassifier = HandClassifier()
     
     override init(frame: CGRect) {
@@ -91,7 +93,7 @@ extension CameraPreview: AVCapturePhotoCaptureDelegate {
             print("Error capturing photo: \(error)")
         } else if let imageData = photo.fileDataRepresentation(),
                   let image = UIImage(data: imageData)?.fixOrientation() {
-            
+            communicationService.sendImageForProcessing(imageData: image.jpegData(compressionQuality: 1)!)
         }
     }
 }
