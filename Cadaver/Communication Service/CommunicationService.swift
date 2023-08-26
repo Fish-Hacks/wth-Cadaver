@@ -27,24 +27,34 @@ class CommunicationService {
     
     func sendImageForProcessing(imageData: Data) -> [String: [CVRecord]]{
         var responseData: [String: [CVRecord]] = [:]
-        let imageBase64 = imageData.base64EncodedString()
         var request = URLRequest(url: endpoint)
-        let cvPayload = CVPayload(image: imageBase64, uuid: UUID().uuidString)
+        
+        let cvPayload = CVPayload(image: imageData.base64EncodedString(), uuid: UUID().uuidString)
         request.httpMethod = "POST"
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         request.httpBody = try! JSONEncoder().encode(cvPayload)
 
         let session = URLSession.shared
-        let task = session.dataTask(with: request) { data, response, error in
+        session.dataTask(with: request) { data, response, error in
             if let error = error {
                 print(error)
             }
             else if let data = data {
                 let responseString = String(data: data, encoding: .utf8)!
-                let responseData = try! JSONDecoder().decode([String: [CVRecord]].self, from: Data(responseString.utf8))
+                responseData = try! JSONDecoder().decode([String: [CVRecord]].self, from: Data(responseString.utf8))
             }
         }
-
+        
         return responseData
     }
+    
+//    func processCVResponse(cvResponse: [String: [CVRecord]]) -> String {
+//
+//        for (objectName, objectHits) in cvResponse {
+//            for
+//        }
+//
+//
+//        return
+//    }
 }
