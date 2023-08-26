@@ -16,5 +16,6 @@ extension CameraPreview: AVCaptureVideoDataOutputSampleBufferDelegate {
         guard let pixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else { return }
         
         handClassifier.receiveHand(image: pixelBuffer)
+        textService.receiveText(image: pixelBuffer)
     }
 }

@@ -9,13 +9,14 @@
 /* Begin PBXBuildFile section */
 		32090AB32A99CB5C00B232BF /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32090AB22A99CB5C00B232BF /* UIImage.swift */; };
 		32090AB62A99DD5200B232BF /* CommunicationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32090AB52A99DD5200B232BF /* CommunicationService.swift */; };
+		32090AB82A9A080300B232BF /* TextService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32090AB72A9A080300B232BF /* TextService.swift */; };
 		3254BB2F2A99C05F0022E7E0 /* CadaverApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3254BB2E2A99C05F0022E7E0 /* CadaverApp.swift */; };
 		3254BB312A99C05F0022E7E0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3254BB302A99C05F0022E7E0 /* ContentView.swift */; };
 		3254BB332A99C0610022E7E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3254BB322A99C0610022E7E0 /* Assets.xcassets */; };
 		3254BB362A99C0610022E7E0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3254BB352A99C0610022E7E0 /* Preview Assets.xcassets */; };
 		3254BB3D2A99C1270022E7E0 /* GestureTrackingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3254BB3C2A99C1270022E7E0 /* GestureTrackingService.swift */; };
-		32A391612A99C1E4007DC786 /* HandClassifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A3915F2A99C1E4007DC786 /* HandClassifier.swift */; };
-		32A391622A99C1E4007DC786 /* HandClassifierDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A391602A99C1E4007DC786 /* HandClassifierDelegate.swift */; };
+		32A391612A99C1E4007DC786 /* HandService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A3915F2A99C1E4007DC786 /* HandService.swift */; };
+		32A391622A99C1E4007DC786 /* HandServiceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A391602A99C1E4007DC786 /* HandServiceDelegate.swift */; };
 		32A3916A2A99C225007DC786 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A391652A99C225007DC786 /* Array.swift */; };
 		32A3916B2A99C225007DC786 /* CGPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A391662A99C225007DC786 /* CGPoint.swift */; };
 		32A3916C2A99C225007DC786 /* SCNNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A391672A99C225007DC786 /* SCNNode.swift */; };
@@ -28,14 +29,15 @@
 /* Begin PBXFileReference section */
 		32090AB22A99CB5C00B232BF /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		32090AB52A99DD5200B232BF /* CommunicationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunicationService.swift; sourceTree = "<group>"; };
+		32090AB72A9A080300B232BF /* TextService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextService.swift; sourceTree = "<group>"; };
 		3254BB2B2A99C05F0022E7E0 /* Cadaver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cadaver.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3254BB2E2A99C05F0022E7E0 /* CadaverApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadaverApp.swift; sourceTree = "<group>"; };
 		3254BB302A99C05F0022E7E0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3254BB322A99C0610022E7E0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3254BB352A99C0610022E7E0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3254BB3C2A99C1270022E7E0 /* GestureTrackingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestureTrackingService.swift; sourceTree = "<group>"; };
-		32A3915F2A99C1E4007DC786 /* HandClassifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HandClassifier.swift; sourceTree = "<group>"; };
-		32A391602A99C1E4007DC786 /* HandClassifierDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HandClassifierDelegate.swift; sourceTree = "<group>"; };
+		32A3915F2A99C1E4007DC786 /* HandService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HandService.swift; sourceTree = "<group>"; };
+		32A391602A99C1E4007DC786 /* HandServiceDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HandServiceDelegate.swift; sourceTree = "<group>"; };
 		32A391652A99C225007DC786 /* Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
 		32A391662A99C225007DC786 /* CGPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGPoint.swift; sourceTree = "<group>"; };
 		32A391672A99C225007DC786 /* SCNNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCNNode.swift; sourceTree = "<group>"; };
@@ -105,8 +107,9 @@
 		3254BB3E2A99C12B0022E7E0 /* Gesture Tracking Service */ = {
 			isa = PBXGroup;
 			children = (
-				32A3915F2A99C1E4007DC786 /* HandClassifier.swift */,
-				32A391602A99C1E4007DC786 /* HandClassifierDelegate.swift */,
+				32A3915F2A99C1E4007DC786 /* HandService.swift */,
+				32A391602A99C1E4007DC786 /* HandServiceDelegate.swift */,
+				32090AB72A9A080300B232BF /* TextService.swift */,
 				3254BB3C2A99C1270022E7E0 /* GestureTrackingService.swift */,
 				32A3916F2A99C391007DC786 /* CameraPreview.swift */,
 				32A3916E2A99C390007DC786 /* CameraPreview+AVCaptureVideoDataOutputSampleBufferDelegate.swift */,
@@ -207,10 +210,11 @@
 				32A391712A99C391007DC786 /* CameraPreview.swift in Sources */,
 				32A391702A99C391007DC786 /* CameraPreview+AVCaptureVideoDataOutputSampleBufferDelegate.swift in Sources */,
 				3254BB3D2A99C1270022E7E0 /* GestureTrackingService.swift in Sources */,
+				32090AB82A9A080300B232BF /* TextService.swift in Sources */,
 				32090AB62A99DD5200B232BF /* CommunicationService.swift in Sources */,
-				32A391622A99C1E4007DC786 /* HandClassifierDelegate.swift in Sources */,
+				32A391622A99C1E4007DC786 /* HandServiceDelegate.swift in Sources */,
 				32090AB32A99CB5C00B232BF /* UIImage.swift in Sources */,
-				32A391612A99C1E4007DC786 /* HandClassifier.swift in Sources */,
+				32A391612A99C1E4007DC786 /* HandService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

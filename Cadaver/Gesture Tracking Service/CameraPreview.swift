@@ -22,7 +22,8 @@ final class CameraPreview: UIView {
     
     var communicationService = CommunicationService()
     
-    var handClassifier = HandClassifier()
+    var handClassifier = HandService()
+    var textService = TextService()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
