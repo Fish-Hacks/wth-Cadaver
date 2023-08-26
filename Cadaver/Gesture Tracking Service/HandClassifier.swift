@@ -64,7 +64,7 @@ class HandClassifier {
             let fingerTipAverageLocation = CGPoint(x: fingerTipsSum.x / CGFloat(fingerTipsLocation.count),
                                                    y: fingerTipsSum.y / CGFloat(fingerTipsLocation.count))
             
-            
+            print(handState)
             delegate?.handClassificationDidUpdate(handState, centerPoint: fingerTipAverageLocation)
         } catch {
             delegate?.handClassificationDidUpdate(.noHand, centerPoint: .zero)

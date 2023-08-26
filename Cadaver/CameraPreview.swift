@@ -20,6 +20,8 @@ final class CameraPreview: UIView {
     
     private var photoOutput = AVCapturePhotoOutput()
     
+    var handClassifier = HandClassifier()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupCaptureSession()
@@ -64,12 +66,32 @@ final class CameraPreview: UIView {
         let previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
         previewLayer.videoGravity = .resizeAspectFill
         layer.addSublayer(previewLayer)
+        
+        Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { _ in
+            self.takePhoto()
+        }
     }
 
     override func layoutSubviews() {
         super.layoutSubviews()
         if let previewLayer = layer.sublayers?.first as? AVCaptureVideoPreviewLayer {
             previewLayer.frame = bounds
+        }
+    }
+    
+    func takePhoto() {
+        let settings = AVCapturePhotoSettings()
+        photoOutput.capturePhoto(with: settings, delegate: self)
+    }
+}
+
+extension CameraPreview: AVCapturePhotoCaptureDelegate {
+    func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
+        if let error = error {
+            print("Error capturing photo: \(error)")
+        } else if let imageData = photo.fileDataRepresentation(),
+                  let image = UIImage(data: imageData)?.fixOrientation() {
+            
         }
     }
 }

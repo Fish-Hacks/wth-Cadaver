@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		32090AB32A99CB5C00B232BF /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32090AB22A99CB5C00B232BF /* UIImage.swift */; };
 		3254BB2F2A99C05F0022E7E0 /* CadaverApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3254BB2E2A99C05F0022E7E0 /* CadaverApp.swift */; };
 		3254BB312A99C05F0022E7E0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3254BB302A99C05F0022E7E0 /* ContentView.swift */; };
 		3254BB332A99C0610022E7E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3254BB322A99C0610022E7E0 /* Assets.xcassets */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		32090AB22A99CB5C00B232BF /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		3254BB2B2A99C05F0022E7E0 /* Cadaver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cadaver.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3254BB2E2A99C05F0022E7E0 /* CadaverApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadaverApp.swift; sourceTree = "<group>"; };
 		3254BB302A99C05F0022E7E0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				32A391652A99C225007DC786 /* Array.swift */,
+				32090AB22A99CB5C00B232BF /* UIImage.swift */,
 				32A391662A99C225007DC786 /* CGPoint.swift */,
 				32A391672A99C225007DC786 /* SCNNode.swift */,
 				32A391682A99C225007DC786 /* SCNVector3.swift */,
@@ -194,6 +197,7 @@
 				32A391702A99C391007DC786 /* CameraPreview+AVCaptureVideoDataOutputSampleBufferDelegate.swift in Sources */,
 				3254BB3D2A99C1270022E7E0 /* GestureTrackingService.swift in Sources */,
 				32A391622A99C1E4007DC786 /* HandClassifierDelegate.swift in Sources */,
+				32090AB32A99CB5C00B232BF /* UIImage.swift in Sources */,
 				32A391612A99C1E4007DC786 /* HandClassifier.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
