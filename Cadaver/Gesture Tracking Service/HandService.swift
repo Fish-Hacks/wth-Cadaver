@@ -27,7 +27,6 @@ class HandService {
             try handler.perform([handPoseRequest])
             
             guard let observation = handPoseRequest.results?.first else {
-//                delegate?.handClassificationDidUpdate(.noHand, centerPoint: .zero)
                 return
             }
             
@@ -44,7 +43,6 @@ class HandService {
             } else {
                 print("Not")
             }
-            
         } catch {
             
         }
