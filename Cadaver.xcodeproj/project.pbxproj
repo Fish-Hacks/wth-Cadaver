@@ -18,6 +18,9 @@
 		32A3916B2A99C225007DC786 /* CGPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A391662A99C225007DC786 /* CGPoint.swift */; };
 		32A3916C2A99C225007DC786 /* SCNNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A391672A99C225007DC786 /* SCNNode.swift */; };
 		32A3916D2A99C225007DC786 /* SCNVector3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A391682A99C225007DC786 /* SCNVector3.swift */; };
+		32A391702A99C391007DC786 /* CameraPreview+AVCaptureVideoDataOutputSampleBufferDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A3916E2A99C390007DC786 /* CameraPreview+AVCaptureVideoDataOutputSampleBufferDelegate.swift */; };
+		32A391712A99C391007DC786 /* CameraPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A3916F2A99C391007DC786 /* CameraPreview.swift */; };
+		32A391732A99C3D3007DC786 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A391722A99C3D3007DC786 /* CameraView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +36,9 @@
 		32A391662A99C225007DC786 /* CGPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGPoint.swift; sourceTree = "<group>"; };
 		32A391672A99C225007DC786 /* SCNNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCNNode.swift; sourceTree = "<group>"; };
 		32A391682A99C225007DC786 /* SCNVector3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCNVector3.swift; sourceTree = "<group>"; };
+		32A3916E2A99C390007DC786 /* CameraPreview+AVCaptureVideoDataOutputSampleBufferDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CameraPreview+AVCaptureVideoDataOutputSampleBufferDelegate.swift"; sourceTree = "<group>"; };
+		32A3916F2A99C391007DC786 /* CameraPreview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraPreview.swift; sourceTree = "<group>"; };
+		32A391722A99C3D3007DC786 /* CameraView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +73,9 @@
 			children = (
 				3254BB2E2A99C05F0022E7E0 /* CadaverApp.swift */,
 				3254BB302A99C05F0022E7E0 /* ContentView.swift */,
+				32A3916F2A99C391007DC786 /* CameraPreview.swift */,
+				32A3916E2A99C390007DC786 /* CameraPreview+AVCaptureVideoDataOutputSampleBufferDelegate.swift */,
+				32A391722A99C3D3007DC786 /* CameraView.swift */,
 				3254BB3E2A99C12B0022E7E0 /* Gesture Tracking Service */,
 				3254BB322A99C0610022E7E0 /* Assets.xcassets */,
 				32A391632A99C216007DC786 /* Helper Methods */,
@@ -177,9 +186,12 @@
 				3254BB312A99C05F0022E7E0 /* ContentView.swift in Sources */,
 				32A3916D2A99C225007DC786 /* SCNVector3.swift in Sources */,
 				32A3916A2A99C225007DC786 /* Array.swift in Sources */,
+				32A391732A99C3D3007DC786 /* CameraView.swift in Sources */,
 				3254BB2F2A99C05F0022E7E0 /* CadaverApp.swift in Sources */,
 				32A3916C2A99C225007DC786 /* SCNNode.swift in Sources */,
 				32A3916B2A99C225007DC786 /* CGPoint.swift in Sources */,
+				32A391712A99C391007DC786 /* CameraPreview.swift in Sources */,
+				32A391702A99C391007DC786 /* CameraPreview+AVCaptureVideoDataOutputSampleBufferDelegate.swift in Sources */,
 				3254BB3D2A99C1270022E7E0 /* GestureTrackingService.swift in Sources */,
 				32A391622A99C1E4007DC786 /* HandClassifierDelegate.swift in Sources */,
 				32A391612A99C1E4007DC786 /* HandClassifier.swift in Sources */,
@@ -319,11 +331,13 @@
 				DEVELOPMENT_TEAM = 9W63WN9LG4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Track hand gestures";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -348,11 +362,13 @@
 				DEVELOPMENT_TEAM = 9W63WN9LG4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Track hand gestures";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
