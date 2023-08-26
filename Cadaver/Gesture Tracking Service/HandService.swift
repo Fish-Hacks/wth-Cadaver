@@ -16,8 +16,6 @@ class HandService {
     
     var delegate: HandServiceDelegate?
     
-    var previousClassification: HandClassification = .thumbToIndex
-    
     init() {
         handPoseRequest.maximumHandCount = 1
     }
@@ -39,24 +37,16 @@ class HandService {
                   let thumbTipLocation = fingerPoints[.thumbTip],
                   let thumbIPLocation = fingerPoints[.thumbIP] else { return }
             
-            var classificationResults: [HandClassification] = []
-            
             let reference = thumbTipLocation.location.distance(from: thumbIPLocation.location)
             
             if (thumbTipLocation.location.distance(from: indexTipLocation.location) / reference) < 1.5 {
-                classificationResults.append(.thumbToIndex)
+                print("Tapping")
+            } else {
+                print("Not")
             }
             
-            print(classificationResults)
-            
         } catch {
-//            delegate?.handClassificationDidUpdate(.noHand, centerPoint: .zero)
+            
         }
-    }
-    
-    enum HandClassification {
-        case thumbToIndex
-        case thumbToMiddle
-        case thumbToRing
     }
 }

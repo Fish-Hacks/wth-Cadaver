@@ -22,6 +22,8 @@ final class CameraPreview: UIView {
     
     var communicationService = CommunicationService()
     
+    var speechService = SpeechService()
+    
     var handClassifier = HandService()
     var textService = TextService()
     
@@ -85,6 +87,8 @@ final class CameraPreview: UIView {
     func takePhoto() {
         let settings = AVCapturePhotoSettings()
         photoOutput.capturePhoto(with: settings, delegate: self)
+        
+        speechService.dictatedText(text: "hello")
     }
 }
 

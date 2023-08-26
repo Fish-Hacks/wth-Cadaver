@@ -87,9 +87,9 @@
 		3254BB2D2A99C05F0022E7E0 /* Cadaver */ = {
 			isa = PBXGroup;
 			children = (
-				B45143D42A99F7AD00267842 /* Speech Service */,
 				3254BB2E2A99C05F0022E7E0 /* CadaverApp.swift */,
 				3254BB302A99C05F0022E7E0 /* ContentView.swift */,
+				B45143D42A99F7AD00267842 /* Speech Service */,
 				32090AB42A99DD4700B232BF /* Communication Service */,
 				3254BB3E2A99C12B0022E7E0 /* Gesture Tracking Service */,
 				3254BB322A99C0610022E7E0 /* Assets.xcassets */,
