@@ -23,6 +23,7 @@
 		32A391702A99C391007DC786 /* CameraPreview+AVCaptureVideoDataOutputSampleBufferDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A3916E2A99C390007DC786 /* CameraPreview+AVCaptureVideoDataOutputSampleBufferDelegate.swift */; };
 		32A391712A99C391007DC786 /* CameraPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A3916F2A99C391007DC786 /* CameraPreview.swift */; };
 		32A391732A99C3D3007DC786 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A391722A99C3D3007DC786 /* CameraView.swift */; };
+		B45143D62A99F7C500267842 /* SpeechService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45143D52A99F7C500267842 /* SpeechService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		32A3916E2A99C390007DC786 /* CameraPreview+AVCaptureVideoDataOutputSampleBufferDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CameraPreview+AVCaptureVideoDataOutputSampleBufferDelegate.swift"; sourceTree = "<group>"; };
 		32A3916F2A99C391007DC786 /* CameraPreview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraPreview.swift; sourceTree = "<group>"; };
 		32A391722A99C3D3007DC786 /* CameraView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		B45143D52A99F7C500267842 /* SpeechService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 		3254BB2D2A99C05F0022E7E0 /* Cadaver */ = {
 			isa = PBXGroup;
 			children = (
+				B45143D42A99F7AD00267842 /* Speech Service */,
 				3254BB2E2A99C05F0022E7E0 /* CadaverApp.swift */,
 				3254BB302A99C05F0022E7E0 /* ContentView.swift */,
 				32090AB42A99DD4700B232BF /* Communication Service */,
@@ -125,6 +128,14 @@
 				32A391682A99C225007DC786 /* SCNVector3.swift */,
 			);
 			path = "Helper Methods";
+			sourceTree = "<group>";
+		};
+		B45143D42A99F7AD00267842 /* Speech Service */ = {
+			isa = PBXGroup;
+			children = (
+				B45143D52A99F7C500267842 /* SpeechService.swift */,
+			);
+			path = "Speech Service";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,6 +210,7 @@
 			files = (
 				3254BB312A99C05F0022E7E0 /* ContentView.swift in Sources */,
 				32A3916D2A99C225007DC786 /* SCNVector3.swift in Sources */,
+				B45143D62A99F7C500267842 /* SpeechService.swift in Sources */,
 				32A3916A2A99C225007DC786 /* Array.swift in Sources */,
 				32A391732A99C3D3007DC786 /* CameraView.swift in Sources */,
 				3254BB2F2A99C05F0022E7E0 /* CadaverApp.swift in Sources */,
