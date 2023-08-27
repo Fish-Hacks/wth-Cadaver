@@ -33,7 +33,7 @@ class CommunicationService {
     
     init() {}
     
-    func sendImageForProcessing(imageData: Data) -> CVResponse{
+    func sendImageForProcessing(imageData: Data) async -> CVResponse {
         let requestID = UUID().uuidString
         let endpoint = URL(string: "\(apiHost)?uuid=\(requestID)")!
         var responseData: [String: [CVRecord]] = [:]
@@ -44,14 +44,14 @@ class CommunicationService {
         request.httpBody = imageData
 
         let session = URLSession.shared
-        session.dataTask(with: request) { data, response, error in
-            if let error = error {
-                print(error)
-            }
-            else if let data = data {
-                let responseString = String(data: data, encoding: .utf8)!
-                responseData = try! JSONDecoder().decode([String: [CVRecord]].self, from: Data(responseString.utf8))
-            }
+        
+        do {
+            let (data, _) = try await session.data(for: request)
+            
+            let responseString = String(data: data, encoding: .utf8)!
+            responseData = try! JSONDecoder().decode([String: [CVRecord]].self, from: Data(responseString.utf8))
+        } catch {
+            print(error)
         }
         
         return processCVResponse(cvResponse: responseData)

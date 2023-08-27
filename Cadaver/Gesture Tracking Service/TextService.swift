@@ -13,6 +13,8 @@ class TextService {
     
     var textRequest = VNRecognizeTextRequest()
     
+    var results: [VNRecognizedTextObservation] = []
+    
     init() {
         textRequest.recognitionLanguages = ["en_US"]
         textRequest.recognitionLevel = .fast
@@ -24,11 +26,7 @@ class TextService {
         do {
             try handler.perform([textRequest])
             
-            for result in textRequest.results ?? [] {
-                if let result = result.topCandidates(1).first?.string {
-                    print(result)
-                }
-            }
+            results = textRequest.results ?? []
         } catch {
         }
     }

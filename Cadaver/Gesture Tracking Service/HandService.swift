@@ -16,6 +16,10 @@ class HandService {
     
     var delegate: HandServiceDelegate?
     
+    var handStateQueue: [HandState] = []
+    
+    var previousDetection = HandState.neither
+    
     init() {
         handPoseRequest.maximumHandCount = 1
     }
@@ -39,20 +43,51 @@ class HandService {
             
             let reference = thumbTipLocation.location.distance(from: thumbIPLocation.location)
             
-//            print((indexTipLocation.location.distance(from: wristLocation.location) / reference))
-            
             if (indexTipLocation.location.distance(from: wristLocation.location) / reference) > 5 {
-                print("Pointing")
-            
+                handStateQueue.append(.pointing(indexTipLocation.location))
+            } else if (thumbTipLocation.location.distance(from: indexTipLocation.location) / reference) < 1.5 {
+                handStateQueue.append(.tapping)
+            } else {
+                handStateQueue.append(.neither)
             }
             
-            if (thumbTipLocation.location.distance(from: indexTipLocation.location) / reference) < 1.5 {
-                print("Tapping")
+            if handStateQueue.count == 6 {
+                handStateQueue.removeFirst()
+            }
+            
+            let allPointing = handStateQueue.allSatisfy {
+                $0.isPointing()
+            }
+            
+            let allTapping = handStateQueue.allSatisfy {
+                $0 == .tapping
+            }
+            
+            if allPointing && !previousDetection.isPointing() {
+                delegate?.didReceiveHand(.pointing(indexTipLocation.location))
+                previousDetection = .pointing(indexTipLocation.location)
+            } else if allTapping && previousDetection != .tapping {
+                delegate?.didReceiveHand(.tapping)
+                previousDetection = .tapping
             } else {
-                print("Not")
+                delegate?.didReceiveHand(.neither)
+                previousDetection = .neither
             }
         } catch {
             
+        }
+    }
+}
+
+enum HandState: Equatable {
+    case pointing(CGPoint)
+    case tapping
+    case neither
+    
+    func isPointing() -> Bool {
+        switch self {
+        case .pointing(_): return true
+        default: return false
         }
     }
 }

@@ -8,5 +8,5 @@
 import Foundation
 
 protocol HandServiceDelegate {
-    
+    func didReceiveHand(_ handState: HandState)
 }
