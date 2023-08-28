@@ -8,8 +8,8 @@
 import Foundation
 
 struct Point: Codable {
-    var x: Int
-    var y: Int
+    var x: Double
+    var y: Double
 }
 
 struct CoordinateRecord: Codable {
@@ -29,7 +29,7 @@ struct CVResponse {
 
 class CommunicationService {
     
-    let apiHost: String = "http://192.56.128.60:5000/cv"
+    let apiHost: String = "http://192.168.1.118:5000/cv"
     
     init() {}
     
@@ -59,7 +59,7 @@ class CommunicationService {
     
     func processCVResponse(cvResponse: [String: [CVRecord]]) -> CVResponse {
         
-        let sizeThresold = 150000
+        let sizeThresold = 0.01
         var itemsInView: [String: Int8] = [:]
         var contextCoodinates: CGRect? = nil
         
@@ -74,9 +74,11 @@ class CommunicationService {
                 }
                 
                 let area = width * length
-                if area < sizeThresold {
-                    continue
-                }
+//                if area < sizeThresold {
+//                    continue
+//                }
+                
+                
                 itemsInView[objectName]! += 1
             }
         }

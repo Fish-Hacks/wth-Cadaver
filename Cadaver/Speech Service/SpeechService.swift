@@ -16,6 +16,7 @@ class SpeechService {
     
     func dictatedText(text: String) {
         let utterance = AVSpeechUtterance(string: text)
+        utterance.rate = 0.58
         
         let voice = AVSpeechSynthesisVoice(language: "en-GB")!
         
@@ -25,5 +26,7 @@ class SpeechService {
         try? AVAudioSession.sharedInstance().setActive(true)
         
         synthesizer.speak(utterance)
+        
+        print("saying", text)
     }
 }

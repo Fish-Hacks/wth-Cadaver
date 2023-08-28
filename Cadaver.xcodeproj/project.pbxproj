@@ -10,6 +10,7 @@
 		32090AB32A99CB5C00B232BF /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32090AB22A99CB5C00B232BF /* UIImage.swift */; };
 		32090AB62A99DD5200B232BF /* CommunicationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32090AB52A99DD5200B232BF /* CommunicationService.swift */; };
 		32090AB82A9A080300B232BF /* TextService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32090AB72A9A080300B232BF /* TextService.swift */; };
+		323616492A9AF56C00A88D90 /* TransferService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323616482A9AF56C00A88D90 /* TransferService.swift */; };
 		3254BB2F2A99C05F0022E7E0 /* CadaverApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3254BB2E2A99C05F0022E7E0 /* CadaverApp.swift */; };
 		3254BB312A99C05F0022E7E0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3254BB302A99C05F0022E7E0 /* ContentView.swift */; };
 		3254BB332A99C0610022E7E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3254BB322A99C0610022E7E0 /* Assets.xcassets */; };
@@ -31,6 +32,7 @@
 		32090AB22A99CB5C00B232BF /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		32090AB52A99DD5200B232BF /* CommunicationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunicationService.swift; sourceTree = "<group>"; };
 		32090AB72A9A080300B232BF /* TextService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextService.swift; sourceTree = "<group>"; };
+		323616482A9AF56C00A88D90 /* TransferService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransferService.swift; sourceTree = "<group>"; };
 		3254BB2B2A99C05F0022E7E0 /* Cadaver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cadaver.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3254BB2E2A99C05F0022E7E0 /* CadaverApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadaverApp.swift; sourceTree = "<group>"; };
 		3254BB302A99C05F0022E7E0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 			children = (
 				3254BB2E2A99C05F0022E7E0 /* CadaverApp.swift */,
 				3254BB302A99C05F0022E7E0 /* ContentView.swift */,
+				323616482A9AF56C00A88D90 /* TransferService.swift */,
 				B45143D42A99F7AD00267842 /* Speech Service */,
 				32090AB42A99DD4700B232BF /* Communication Service */,
 				3254BB3E2A99C12B0022E7E0 /* Gesture Tracking Service */,
@@ -221,6 +224,7 @@
 				32A3916B2A99C225007DC786 /* CGPoint.swift in Sources */,
 				32A391712A99C391007DC786 /* CameraPreview.swift in Sources */,
 				32A391702A99C391007DC786 /* CameraPreview+AVCaptureVideoDataOutputSampleBufferDelegate.swift in Sources */,
+				323616492A9AF56C00A88D90 /* TransferService.swift in Sources */,
 				3254BB3D2A99C1270022E7E0 /* GestureTrackingService.swift in Sources */,
 				32090AB82A9A080300B232BF /* TextService.swift in Sources */,
 				32090AB62A99DD5200B232BF /* CommunicationService.swift in Sources */,
@@ -363,6 +367,7 @@
 				DEVELOPMENT_TEAM = 9W63WN9LG4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "We use bluetooth to demonstrate fundamental CoreBluetooth functionality";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Track hand gestures";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -394,6 +399,7 @@
 				DEVELOPMENT_TEAM = 9W63WN9LG4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "We use bluetooth to demonstrate fundamental CoreBluetooth functionality";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Track hand gestures";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

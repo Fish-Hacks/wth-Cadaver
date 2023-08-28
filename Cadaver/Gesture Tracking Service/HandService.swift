@@ -43,10 +43,10 @@ class HandService {
             
             let reference = thumbTipLocation.location.distance(from: thumbIPLocation.location)
             
-            if (indexTipLocation.location.distance(from: wristLocation.location) / reference) > 5 {
-                handStateQueue.append(.pointing(indexTipLocation.location))
-            } else if (thumbTipLocation.location.distance(from: indexTipLocation.location) / reference) < 1.5 {
+            if (thumbTipLocation.location.distance(from: indexTipLocation.location) / reference) < 1.5 {
                 handStateQueue.append(.tapping)
+            } else if (indexTipLocation.location.distance(from: wristLocation.location) / reference) > 5 {
+                handStateQueue.append(.pointing(indexTipLocation.location))
             } else {
                 handStateQueue.append(.neither)
             }
@@ -63,15 +63,23 @@ class HandService {
                 $0 == .tapping
             }
             
-            if allPointing && !previousDetection.isPointing() {
-                delegate?.didReceiveHand(.pointing(indexTipLocation.location))
-                previousDetection = .pointing(indexTipLocation.location)
-            } else if allTapping && previousDetection != .tapping {
-                delegate?.didReceiveHand(.tapping)
-                previousDetection = .tapping
-            } else {
-                delegate?.didReceiveHand(.neither)
-                previousDetection = .neither
+            let allGarbage = handStateQueue.allSatisfy {
+                $0 == .neither
+            }
+            
+            if handStateQueue.count == 5 {
+                if allPointing && !previousDetection.isPointing() {
+                    delegate?.didReceiveHand(.pointing(indexTipLocation.location))
+                    previousDetection = .pointing(indexTipLocation.location)
+                    print("pointing")
+                } else if allTapping && previousDetection != .tapping {
+                    delegate?.didReceiveHand(.tapping)
+                    previousDetection = .tapping
+                    print("tapping")
+                } else if allGarbage {
+                    delegate?.didReceiveHand(.neither)
+                    previousDetection = .neither
+                }
             }
         } catch {
             

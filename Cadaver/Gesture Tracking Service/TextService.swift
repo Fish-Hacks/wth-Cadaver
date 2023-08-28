@@ -18,6 +18,8 @@ class TextService {
     init() {
         textRequest.recognitionLanguages = ["en_US"]
         textRequest.recognitionLevel = .fast
+        
+        textRequest.usesLanguageCorrection = true
     }
     
     func receiveText(image pixelBuffer: CVPixelBuffer) {
